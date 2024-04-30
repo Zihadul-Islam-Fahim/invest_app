@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invest_app/ui/screens/onboading/extra/extra_screen_3.dart';
@@ -56,12 +55,20 @@ class _ExtraScreen2State extends State<ExtraScreen2> {
                 Text(
                   'Transaction',
                   style: TextStyle(
-                      color: Colors.white, fontFamily: 'poppins', fontSize: 30, fontWeight: FontWeight.bold,),
+                    color: Colors.white,
+                    fontFamily: 'poppins',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(
                   'Security',
                   style: TextStyle(
-                      color: Colors.white, fontFamily: 'poppins', fontSize: 30, fontWeight: FontWeight.bold,),
+                    color: Colors.white,
+                    fontFamily: 'poppins',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
@@ -76,7 +83,7 @@ class _ExtraScreen2State extends State<ExtraScreen2> {
                   width: 100,
                   child: ElevatedButton(
                       onPressed: () {
-                        Get.to(() => ExtraScreen3());
+                        Get.to(() => const ExtraScreen3());
                       },
                       child: const Icon(
                         Icons.arrow_forward_ios,

@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:invest_app/ui/screens/onboading/pin_verification%20screen.dart';
-
 import 'package:invest_app/ui/utilities/app_colors.dart';
-import 'login_screen.dart';
+
+import 'pin_verification_screen.dart';
 
 class ForgotPassScreen extends StatefulWidget {
   const ForgotPassScreen({super.key});
@@ -26,7 +24,7 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
-        title: Text(
+        title: const Text(
           'Forgot Password',
           style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
         ),
@@ -35,7 +33,7 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: Colors.white,
             )),
@@ -53,7 +51,7 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                   SizedBox(
                     height: size.height * 0.05,
                   ),
-                  Text(
+                  const Text(
                     "A 4 digit pin will send to your email address.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -78,7 +76,8 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                       TextFormField(
                         controller: _emailTEControlller,
                         keyboardType: TextInputType.emailAddress,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         validator: (String? v) {
                           if (v!.isEmpty) {
                             return "enter email";
@@ -99,7 +98,8 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                           child: ElevatedButton(
                             onPressed: () async {
                               if (_formKey.currentState!.validate()) {
-                                Get.to(()=> PinVerifyScreen(email: "fahimzihad@gmail.com"));
+                                Get.to(() => const PinVerifyScreen(
+                                    email: "fahimzihad@gmail.com"));
                               }
                             },
                             child: const Text(

@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         ),
         textButtonTheme: TextButtonThemeData(
           style: OutlinedButton.styleFrom(
-           textStyle: TextStyle(fontFamily: 'poppins',fontSize: 20)
+           textStyle: const TextStyle(fontFamily: 'poppins',fontSize: 20)
           ),
         ),
       ),

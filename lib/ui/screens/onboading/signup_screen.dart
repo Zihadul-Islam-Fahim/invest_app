@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invest_app/ui/screens/onboading/login_screen.dart';
@@ -36,9 +35,19 @@ class _SignupScreenState extends State<SignupScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
-        title: Text('Sign up',style: TextStyle(color: Colors.white,fontFamily: 'poppins'),),
+        title: const Text(
+          'Sign up',
+          style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
+        ),
         centerTitle: true,
-        leading: IconButton(onPressed: (){Get.back();}, icon: Icon(Icons.arrow_back,color: Colors.white,)),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            )),
       ),
       body: SafeArea(
         child: Padding(
@@ -64,7 +73,8 @@ class _SignupScreenState extends State<SignupScreen> {
                       TextFormField(
                         controller: _emailTEControlller,
                         keyboardType: TextInputType.emailAddress,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         validator: (String? v) {
                           if (v!.isEmpty) {
                             return "enter first name";
@@ -86,13 +96,14 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                       TextFormField(
                         controller: _passwordTEControlller,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         validator: (String? v) {
                           if (v!.isEmpty) {
                             return "enter last name";
                           }
                         },
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           hintText: 'Enter your last name',
                         ),
                       ),
@@ -108,9 +119,9 @@ class _SignupScreenState extends State<SignupScreen> {
                         height: size.height * 0.01,
                       ),
                       TextFormField(
-
                         keyboardType: TextInputType.emailAddress,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         validator: (String? v) {
                           if (v!.isEmpty) {
                             return "enter email";
@@ -131,9 +142,9 @@ class _SignupScreenState extends State<SignupScreen> {
                         height: size.height * 0.01,
                       ),
                       TextFormField(
-
                         keyboardType: TextInputType.text,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         obscureText: isVisiblePass,
                         validator: (String? v) {
                           if (v!.isEmpty) {
@@ -156,7 +167,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
                       ),
-                      Text(
+                      const Text(
                         'At least 8 character with uppercase letters and numbers',
                         style: TextStyle(fontSize: 14, color: Colors.grey),
                       ),
@@ -170,7 +181,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             value: isChecked,
                             onChanged: onChecked,
                             activeColor: AppColors.yellowColor,
-                            side: BorderSide(color: Colors.white),
+                            side: const BorderSide(color: Colors.white),
                           ),
                           RichText(
                             text: const TextSpan(
@@ -184,13 +195,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                       fontFamily: 'poppins',
                                       fontSize: 13,
                                       color: AppColors.yellowColor),
-                                ), TextSpan(
+                                ),
+                                TextSpan(
                                   text: " &",
                                   style: TextStyle(
-                                      fontFamily: 'poppins',
-                                      fontSize: 13,
-                                      ),
-                                ), TextSpan(
+                                    fontFamily: 'poppins',
+                                    fontSize: 13,
+                                  ),
+                                ),
+                                TextSpan(
                                   text: " Privacy and Policy",
                                   style: TextStyle(
                                       fontFamily: 'poppins',
@@ -230,7 +243,6 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
                       ),
-
                     ],
                   ),
                   SizedBox(
@@ -246,12 +258,11 @@ class _SignupScreenState extends State<SignupScreen> {
                           'Already have an account? ',
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                              fontSize: 13,
-                              fontFamily: 'poppins',
-                              color: Colors.white,
-                             ),
+                            fontSize: 13,
+                            fontFamily: 'poppins',
+                            color: Colors.white,
+                          ),
                         ),
-
                         TextButton(
                           onPressed: () {
                             Get.to(() => const LoginScreen());
@@ -265,7 +276,6 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-
                       ],
                     ),
                   ),

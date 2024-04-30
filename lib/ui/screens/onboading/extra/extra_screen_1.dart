@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invest_app/ui/screens/onboading/login_screen.dart';
 import 'package:invest_app/ui/utilities/app_colors.dart';
 
-import 'extra+screen_2.dart';
+import 'extra_screen_2.dart';
 
 class ExtraScreen1 extends StatefulWidget {
   const ExtraScreen1({super.key});
@@ -57,12 +56,20 @@ class _ExtraScreen1State extends State<ExtraScreen1> {
                 Text(
                   'Welcome To',
                   style: TextStyle(
-                      color: Colors.white, fontFamily: 'poppins', fontSize: 30, fontWeight: FontWeight.bold,),
+                    color: Colors.white,
+                    fontFamily: 'poppins',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(
                   'Bitcoin Invest',
                   style: TextStyle(
-                      color: Colors.white, fontFamily: 'poppins', fontSize: 30, fontWeight: FontWeight.bold,),
+                    color: Colors.white,
+                    fontFamily: 'poppins',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),

@@ -23,7 +23,7 @@ class _VerifyOTPScreenState extends State<PinVerifyScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
-        title: Text(
+        title: const Text(
           'Verification',
           style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
         ),
@@ -32,7 +32,7 @@ class _VerifyOTPScreenState extends State<PinVerifyScreen> {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: Colors.white,
             )),
@@ -46,7 +46,7 @@ class _VerifyOTPScreenState extends State<PinVerifyScreen> {
               const SizedBox(
                 height: 24,
               ),
-              Text(
+              const Text(
                 'Code has been send to uour email',
                 textAlign: TextAlign.start,
                 style: TextStyle(
@@ -55,7 +55,7 @@ class _VerifyOTPScreenState extends State<PinVerifyScreen> {
               Text(
                 widget.email,
                 textAlign: TextAlign.start,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 15, color: Colors.white, fontFamily: 'poppins'),
               ),
               const SizedBox(
@@ -89,7 +89,7 @@ class _VerifyOTPScreenState extends State<PinVerifyScreen> {
               Center(
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Resend Code',
                     style: TextStyle(
                         fontSize: 17,
@@ -108,7 +108,7 @@ class _VerifyOTPScreenState extends State<PinVerifyScreen> {
                 child: Visibility(
                   child: ElevatedButton(
                     onPressed: () async {
-                      Get.to(()=>SetPasswordScreen());
+                      Get.to(() => const SetPasswordScreen());
                     },
                     child: const Text(
                       'Verify',

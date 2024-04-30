@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invest_app/ui/screens/onboading/signup_screen.dart';
@@ -80,7 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextFormField(
                         controller: _emailTEControlller,
                         keyboardType: TextInputType.emailAddress,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         validator: (String? v) {
                           if (v!.isEmpty) {
                             return "enter email";
@@ -102,7 +102,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextFormField(
                         controller: _passwordTEControlller,
                         obscureText: isVisiblePass,
-                        style: const TextStyle(color: Colors.white,fontFamily: 'poppins'),
+                        style: const TextStyle(
+                            color: Colors.white, fontFamily: 'poppins'),
                         validator: (String? v) {
                           if (v!.isEmpty) {
                             return "enter password";

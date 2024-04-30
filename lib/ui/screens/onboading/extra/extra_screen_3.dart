@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:invest_app/ui/screens/onboading/login_screen.dart';
@@ -33,60 +32,68 @@ class _ExtraScreen3State extends State<ExtraScreen3> {
       backgroundColor: AppColors.bgColor,
       body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: SizedBox(
+                child: Image.asset(
+                  "assets/images/coins.png",
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: height * 0.05,
+            ),
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
-                  child: SizedBox(
-                    child: Image.asset(
-                      "assets/images/coins.png",
-                      fit: BoxFit.cover,
-                    ),
+                Text(
+                  'Fast And Reliable',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'poppins',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
-                  height: height * 0.05,
+                Text(
+                  'Market Updated',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'poppins',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Fast And Reliable',
-                      style: TextStyle(
-                          color: Colors.white, fontFamily: 'poppins', fontSize: 30, fontWeight: FontWeight.bold,),
-                    ),
-                    Text(
-                      'Market Updated',
-                      style: TextStyle(
-                          color: Colors.white, fontFamily: 'poppins', fontSize: 30, fontWeight: FontWeight.bold,),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: height * 0.05,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(
-                      height: height * 0.07,
-                      width: 100,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Get.offAll(()=>LoginScreen());
-                          },
-                          child: const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.white,
-                          )),
-                    ),
-                  ],
-                )
               ],
             ),
-          )),
+            SizedBox(
+              height: height * 0.05,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                  height: height * 0.07,
+                  width: 100,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Get.offAll(() => const LoginScreen());
+                      },
+                      child: const Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                      )),
+                ),
+              ],
+            )
+          ],
+        ),
+      )),
     );
   }
 }
