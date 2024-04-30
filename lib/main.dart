@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:invest_app/ui/screens/login_screen.dart';
+import 'package:invest_app/ui/screens/onboading/splash_screen.dart';
 import 'package:invest_app/ui/utilities/app_colors.dart';
 
 void main() {
@@ -18,29 +18,30 @@ class MyApp extends StatelessWidget {
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           contentPadding:
-          const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
-          fillColor: Colors.white,
-          hintStyle: const TextStyle(fontFamily: 'poppins'),
+              const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+          fillColor: Colors.white.withOpacity(0.15),
+          hintStyle:
+              TextStyle(fontFamily: 'poppins', color: Colors.grey.shade700),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(3)
+          ),
         ),
-
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.yellowColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(3),
             ),
           ),
         ),
-        outlinedButtonTheme: OutlinedButtonThemeData(
+        textButtonTheme: TextButtonThemeData(
           style: OutlinedButton.styleFrom(
-            // backgroundColor: Colors.grey[100]?.withOpacity(0.7),
-            side: BorderSide(color: AppColors.yellowColor, width: 2),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),),
-            animationDuration: Duration(seconds: 1),
+           textStyle: TextStyle(fontFamily: 'poppins',fontSize: 20)
           ),
-        ),),
-      home: LoginScreen(),
+        ),
+      ),
+      home: const SplashScreen(),
     );
   }
 }
